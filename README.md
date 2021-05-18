@@ -21,6 +21,8 @@ curl -sLS https://dl.get-arkade.dev | sudo sh
 Install [Minio](https://min.io/) and [OpenFaaS](https://www.openfaas.com/) to your Kubernetes cluster, and follow related post-install instructions:
 
 ```bash
+#set up environment var otherwise arkade is unable to find kubernetes cluster
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 arkade install openfaas
 # Then follow the post-install instructions to log in and start
 # port-forwarding.
